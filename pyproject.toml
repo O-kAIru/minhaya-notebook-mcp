@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "minhaya-notebook-mcp"
+version = "0.1.0"
+description = "Local quiz authoring and review notebook for Minhaya players"
+requires-python = ">=3.11"
+dependencies = ["mcp>=2,<3"]
+
+[project.scripts]
+minhaya-mcp = "minhaya_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["minhaya_mcp"]
